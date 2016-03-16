@@ -1,4 +1,4 @@
-# apple store app data
+# Apple Store App ID Script
 Apple Store App ID Script
 
 The purpose of this script is to read a csv of Apple app ids and output a csv with the parameters
