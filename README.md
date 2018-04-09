@@ -5,10 +5,10 @@ The purpose of this script is to read a csv of Apple app ids and output a csv wi
 
 Requirements: python 2.7
 
-App ID
-Publisher Name
+iTunes ID
+Bundle Id
 App Name
-Description
+Publisher Name
 Primary Category
 
 This script uses Apple's search API here: 
@@ -35,4 +35,3 @@ Steps to execute script:
     python iosappscraper.py
 
 6. Within the same folder, you should see an output file called "iosscraperoutput.csv" which includes the data per app id
-    You can expand the fields to see the data. I reccomend wrapping the text for the "Description" column
