@@ -32,7 +32,7 @@ Steps to execute script:
 
 5. Enter the command below to run the script on your csv input file:
 
-    python iosappscraper.py iosappids.csv
+    python iosappscraper.py
 
 6. Within the same folder, you should see an output file called "iosscraperoutput.csv" which includes the data per app id
     You can expand the fields to see the data. I reccomend wrapping the text for the "Description" column
