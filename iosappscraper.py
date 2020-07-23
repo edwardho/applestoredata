@@ -7,7 +7,7 @@ fp = open('iosscraperoutput.csv', 'wb')
 reader = csv.reader(f)
 writer = csv.writer(fp, delimiter=',')
 
-writer.writerows([['iTunes ID', 'Bundle Id', 'App Name', 'Publisher Name', 'Primary Category']])
+writer.writerows([['iTunes ID', 'Bundle Id', 'App Name', 'Publisher Name', 'Seller URL', 'Primary Category']])
 
 
 
@@ -25,6 +25,11 @@ for row in reader:
                         #print bid
                         pubname = (appdata['results'][0]['sellerName'])
                         #print pubname
+                        if ('sellerUrl' in appdata['results'][0]):
+                                puburl = (appdata['results'][0]['sellerUrl'])
+                        else:
+                                puburl = 'NULL'
+                        #print pubname
                         appname = (appdata['results'][0]['trackName'])
                         #print appname
                         pgenre = (appdata['results'][0]['primaryGenreName'])
@@ -33,6 +38,7 @@ for row in reader:
                         aid = row[0]
                         bid = 'NULL'
                         pubname = 'NULL'
+                        puburl = 'NULL'
                         appname = 'NULL'
                         pgenre = 'NULL'
 
@@ -40,7 +46,8 @@ for row in reader:
                 aid = row[0]
                 bid = 'NULL'
                 pubname = 'NULL'
+                puburl = 'NULL'
                 appname = 'NULL'
                 pgenre = 'NULL'
 
-        writer.writerows([[aid, bid, appname.encode('utf-8'), pubname.encode('utf-8'), pgenre]])
+        writer.writerows([[aid, bid, appname.encode('utf-8'), pubname.encode('utf-8'), puburl.encode('utf-8'),pgenre]])
